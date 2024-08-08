@@ -12,21 +12,23 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var \Magento\Store\Model\StoreManager
      */
-    private $storeManager;
+    private \Magento\Store\Model\StoreManager $storeManager;
 
     /**
      * @var \Magento\Backend\Model\Session
      */
-    private $session;
+    private \Magento\Backend\Model\Session $session;
     
     /**
      * @var \Magento\Framework\HTTP\Client\Curl
      */
-    private $curl;
+    private \Magento\Framework\HTTP\Client\Curl $curl;
 
     /**
      * @param \Magento\Framework\App\Helper\Context $context
-     * @param \Magento\Store\Model\StoreManager     $storeManager
+     * @param \Magento\Store\Model\StoreManager $storeManager
+     * @param \Magento\Backend\Model\Session $session
+     * @param \Magento\Framework\HTTP\Client\Curl $curl
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
@@ -48,7 +50,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param        $version
      * @param string $type
      */
-    public function register($module, $version, $type = 'install')
+    public function register($module, $version, string $type = 'install')
     {
         if (null === $module || null === $version) {
             return;
