@@ -9,7 +9,7 @@ class Feed implements ObserverInterface
     /**
      * @var \Magento\AdminNotification\Model\FeedFactory
      */
-    private \Magento\AdminNotification\Model\FeedFactory $feedFactory;
+    private \HS\All\Model\FeedFactory $feedFactory;
 
     /**
      * @var \Magento\Backend\Model\Auth\Session
