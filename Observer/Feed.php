@@ -7,7 +7,7 @@ use Magento\Framework\Event\ObserverInterface;
 class Feed implements ObserverInterface
 {
     /**
-     * @var \Magento\AdminNotification\Model\FeedFactory
+     * @var \HS\All\Model\FeedFactory
      */
     private \HS\All\Model\FeedFactory $feedFactory;
 
